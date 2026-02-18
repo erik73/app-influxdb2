@@ -1,0 +1,17 @@
+---
+name: PR Labels
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    types:
+      - opened
+      - labeled
+      - unlabeled
+      - synchronize
+
+permissions: {}
+
+jobs:
+  workflows:
+    uses: erik73/workflows/.github/workflows/pr-labels.yaml@d0d4c05fc6c6cdfe93f40f6a727c7370757942e5 # v1.0.6

@@ -1,0 +1,16 @@
+---
+name: Release Drafter
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  workflows:
+    uses: erik73/workflows/.github/workflows/release-drafter.yaml@d0d4c05fc6c6cdfe93f40f6a727c7370757942e5 # v1.0.6

@@ -1,0 +1,31 @@
+---
+name: Deploy
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+permissions: {}
+
+jobs:
+  ci:
+    permissions:
+      actions: read
+      contents: read
+      packages: read
+      security-events: write
+    uses: erik73/workflows/.github/workflows/app-ci.yaml@d0d4c05fc6c6cdfe93f40f6a727c7370757942e5 # v1.0.6
+
+  deploy:
+    needs: ci
+    permissions:
+      contents: read
+      packages: write
+    uses: erik73/workflows/.github/workflows/app-deploy.yaml@d0d4c05fc6c6cdfe93f40f6a727c7370757942e5 # v1.0.6
+    secrets:
+      DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}

@@ -1,0 +1,15 @@
+---
+name: Sync labels
+
+# yamllint disable-line rule:truthy
+on:
+  schedule:
+    - cron: "34 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  workflows:
+    uses: erik73/workflows/.github/workflows/labels.yaml@d0d4c05fc6c6cdfe93f40f6a727c7370757942e5 # v1.0.6
