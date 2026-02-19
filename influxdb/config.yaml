@@ -3,7 +3,7 @@ name: InfluxDB v2
 version: v0.0.4
 slug: influxdbv2
 description: Scalable datastore for metrics, events, and real-time analytics
-url: https://github.com/danieloldberg/addon-influxdbv2/
+url: https://github.com/erik73/hassio-addons
 ingress: false
 ingress_port: 1337
 ingress_stream: false

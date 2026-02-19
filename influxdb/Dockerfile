@@ -81,13 +81,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Daniel Oldberg <contact@danieloldberg.se>" \
+    maintainer="Erik Hilton <erikhilton73@gmail.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="" \
-    org.opencontainers.image.authors="Daniel Oldberg <contact@danieloldberg.se>" \
+    org.opencontainers.image.vendor="Erik73 Hassio-Addons" \
+    org.opencontainers.image.authors="Erik Hilton <erikhilton73@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/danieloldberg/addon-influxdbv2" \
+    org.opencontainers.image.url="https://github.com/erik73/hassio-addons" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
