@@ -18,7 +18,7 @@ ARG BUILD_VERSION
 # Setup base system
 ARG INFLUXDB_VERSION="2.8.0"
 ARG INFLUXCLI_VERSION="2.7.3"
-ARG TRAEFIK_VERSION="2.10.4"
+ARG INFLUX_CLI_VERSION="2.7.5"
 
 RUN apk add --no-cache \
         bash \
@@ -36,7 +36,10 @@ RUN apk add --no-cache \
     && tar xzf "influxdb2-${INFLUXDB_VERSION}_linux_${ARCH}.tar.gz" \
     && cp "influxdb2-${INFLUXDB_VERSION}/influxd" /usr/bin/influxd \
     && rm -rf "influxdb2-${INFLUXDB_VERSION}.tar.gz" \
-        "influxdb2-${INFLUXDB_VERSION}"
+        "influxdb2-${INFLUXDB_VERSION}" \
+    && curl -fLO "https://dl.influxdata.com/influxdb/releases/influxdb2-client-${INFLUX_CLI_VERSION}-linux-${ARCH}.tar.gz" \
+    && tar xzf "influxdb2-client-${INFLUX_CLI_VERSION}-linux-${ARCH}.tar.gz" -C /usr/bin ./influx \
+    && rm -rf "influxdb2-client-${INFLUX_CLI_VERSION}-linux-${ARCH}.tar.gz"
 
 # Copy root filesystem
 COPY rootfs /
