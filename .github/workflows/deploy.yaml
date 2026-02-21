@@ -15,8 +15,8 @@ permissions: {}
 jobs:
   ci:
     permissions:
-      actions: write
-      contents: write
+      actions: read
+      contents: read
       packages: read
       security-events: write
     uses: erik73/workflows/.github/workflows/app-ci.yaml@3f7b33b83dc945d85059fbffd3c4f45ca121455a # v1.0.7
