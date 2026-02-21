@@ -48,7 +48,7 @@ influx_apiToken: <your API-Token>
 influx_orgID: <Your ORG-ID>
 ```
 
-Adding the following snippet to your `configuration.yaml` and alter it 
+Adding the following snippet to your `configuration.yaml` and alter it
 to your needs.
 Especially ignore_attributes and entities. After that,
 please restart Homeassistant to take affect of your changes
@@ -241,3 +241,4 @@ You could [open an issue here][issue] GitHub.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [issue]: https://github.com/erik73/app-influxdb2/issues
 [repository]: https://github.com/erik73/hassio-addons
+```
