@@ -21,13 +21,6 @@ ARG INFLUXCLI_VERSION="2.7.3"
 ARG INFLUX_CLI_VERSION="2.7.5"
 
 RUN apk add --no-cache \
-        bash \
-        ca-certificates \
-        curl \
-        gnupg \
-        run-parts \
-        su-exec \
-        tzdata \
         nginx \
     && update-ca-certificates \
     && ARCH="${BUILD_ARCH}" \
