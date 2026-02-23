@@ -28,7 +28,7 @@ RUN apk add --no-cache \
     && curl -fLO "https://dl.influxdata.com/influxdb/releases/v${INFLUXDB_VERSION}/influxdb2-${INFLUXDB_VERSION}_linux_${ARCH}.tar.gz" \
     && tar xzf "influxdb2-${INFLUXDB_VERSION}_linux_${ARCH}.tar.gz" \
     && cp "influxdb2-${INFLUXDB_VERSION}/influxd" /usr/bin/influxd \
-    && rm -rf "influxdb2-${INFLUXDB_VERSION}.tar.gz" \
+    && rm -rf "influxdb2-${INFLUXDB_VERSION}_linux_${ARCH}.tar.gz" \
         "influxdb2-${INFLUXDB_VERSION}" \
     && curl -fLO "https://dl.influxdata.com/influxdb/releases/influxdb2-client-${INFLUX_CLI_VERSION}-linux-${ARCH}.tar.gz" \
     && tar xzf "influxdb2-client-${INFLUX_CLI_VERSION}-linux-${ARCH}.tar.gz" -C /usr/bin ./influx \
