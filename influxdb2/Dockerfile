@@ -17,7 +17,7 @@ ARG BUILD_VERSION
 
 # Setup base system
 ARG INFLUXDB_VERSION="2.10.1"
-ARG INFLUX_CLI_VERSION="2.8.0"
+ARG INFLUX_CLI_VERSION="2.9.1"
 
 RUN apk add --no-cache \
         nginx \
